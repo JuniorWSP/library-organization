@@ -18,8 +18,13 @@ const booksByAuthorBirthYear = (birthYear) => {
 
 // Requisito 4
 const fantasyOrScienceFictionAuthors = () => {
-  // escreva seu código aqui
+  const livros = books.filter((book) =>
+    book.genre === 'Fantasia' || book.genre === 'Ficção Científica');
+
+  const autores = livros.map((book) => book.author.name).sort();
+  return autores;
 };
+//console.log(fantasyOrScienceFictionAuthors());
 
 // Requisito 5
 const oldBooks = (year) => {
