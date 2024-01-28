@@ -40,9 +40,16 @@ const oldBooks = (year) =>
 /* console.log(oldBooks(2022)); */
 
 // Requisito 6
+const contaPontos = (str) => (str.split('.').length - 1);
+
 const authorWith3DotsOnName = () => {
-  // escreva seu código aqui
+  const livros = books
+    .filter((book) => contaPontos(book.author.name) === 3)
+    .map((book) => book.name);
+
+  return livros.join(', ');
 };
+/* console.log(authorWith3DotsOnName()); */
 
 module.exports = {
   fantasyOrScienceFiction,
