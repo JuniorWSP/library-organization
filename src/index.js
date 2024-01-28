@@ -13,12 +13,14 @@ const oldBooksOrdered = () => {
     .filter((book) => (dataLimite - book.releaseYear) >= 60)
     .sort((a, b) => a.releaseYear - b.releaseYear);
 };
-console.log(oldBooksOrdered());
+/* console.log(oldBooksOrdered()); */
 
 // Requisito 3
-const booksByAuthorBirthYear = (birthYear) => {
-  // escreva seu código aqui
-};
+const booksByAuthorBirthYear = (birthYear) => books
+  .filter((book) => book.author.birthYear === birthYear)
+  .map((book) => book.name);
+
+/* console.log(booksByAuthorBirthYear(1892)); */
 
 // Requisito 4
 const fantasyOrScienceFictionAuthors = () => {
