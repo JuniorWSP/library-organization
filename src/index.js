@@ -33,9 +33,11 @@ const fantasyOrScienceFictionAuthors = () => {
 /* console.log(fantasyOrScienceFictionAuthors()); */
 
 // Requisito 5
-const oldBooks = (year) => {
-  // escreva seu código aqui
-};
+const oldBooks = (year) =>
+  books
+    .filter((book) => (year - book.releaseYear) >= 60)
+    .map((book) => book.name);
+/* console.log(oldBooks(2022)); */
 
 // Requisito 6
 const authorWith3DotsOnName = () => {
